@@ -5,6 +5,9 @@ import org.springframework.stereotype.Service;
 import com.example.urlshortener.dto.UrlRequest;
 import com.example.urlshortener.dto.UrlResponse;
 import com.example.urlshortener.model.UrlMapping;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 import java.util.Optional;
 @Service
