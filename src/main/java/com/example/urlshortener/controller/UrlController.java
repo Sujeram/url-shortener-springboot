@@ -14,5 +14,11 @@ public class UrlController {
     public UrlController(UrlService service) {
         this.service = service;
     }
+    @PostMapping("/shorten")
+    public UrlResponse shortenUrl(@RequestBody UrlRequest request) {
+
+        return service.shortenUrl(request);
+
+    }
 
 }
