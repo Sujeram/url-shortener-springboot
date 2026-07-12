@@ -42,6 +42,14 @@ public class UrlService {
             "http://localhost:8080/" + shortCode);
 
     }
+    public String getOriginalUrl(String shortCode) {
+
+    UrlMapping mapping = repository.findByShortCode(shortCode)
+            .orElseThrow(() -> new RuntimeException("Short URL not found"));
+
+    return mapping.getOriginalUrl();
+
+    }
     private String generateShortCode(String url) {
 
     try {
